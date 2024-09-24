@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
   const [isGlowing, setIsGlowing] = useState(false); // State to control the glow effect on button press
@@ -22,28 +23,30 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
         <img src={`${process.env.PUBLIC_URL}/images/desk.png`} alt="Desk" className="w-[50vw]" />
 
         {/* Portrait changes on hover */}
-        <img
-          src={hoveredSection === 'About' ? `${process.env.PUBLIC_URL}/images/portrait2.png` : `${process.env.PUBLIC_URL}/images/portrait.png`}
-          alt="Portrait"
-          className={`absolute top-[-60%] left-[13%] hover:cursor-pointer w-[11vw] ${
-            isGlowing ? 'hover-glow-image' : ''
-          }`}
-          onMouseEnter={() => setHoveredSection('About')}
-          onMouseLeave={() => setHoveredSection(null)}
-          onClick={() => window.location.href = '/about'}
-        />
+        <Link to="/about">
+          <img
+            src={hoveredSection === 'About' ? `${process.env.PUBLIC_URL}/images/portrait2.png` : `${process.env.PUBLIC_URL}/images/portrait.png`}
+            alt="Portrait"
+            className={`absolute top-[-60%] left-[13%] hover:cursor-pointer w-[11vw] ${
+              isGlowing ? 'hover-glow-image' : ''
+            }`}
+            onMouseEnter={() => setHoveredSection('About')}
+            onMouseLeave={() => setHoveredSection(null)}
+          />
+        </Link>
 
         {/* Laptop changes on hover */}
-        <img
-          src={hoveredSection === 'Projects' ? `${process.env.PUBLIC_URL}/images/laptop2.png` : `${process.env.PUBLIC_URL}/images/laptop.png`}
-          alt="Laptop"
-          className={`absolute top-[-7.1%] left-[48%] hover:cursor-pointer w-[15vw] z-100 ${
-            isGlowing ? 'hover-glow-image' : ''
-          }`}
-          onMouseEnter={() => setHoveredSection('Projects')}
-          onMouseLeave={() => setHoveredSection(null)}
-          onClick={() => window.location.href = '/projects'}
-        />
+        <Link to="/projects">
+          <img
+            src={hoveredSection === 'Projects' ? `${process.env.PUBLIC_URL}/images/laptop2.png` : `${process.env.PUBLIC_URL}/images/laptop.png`}
+            alt="Laptop"
+            className={`absolute top-[-7.1%] left-[48%] hover:cursor-pointer w-[15vw] z-100 ${
+              isGlowing ? 'hover-glow-image' : ''
+            }`}
+            onMouseEnter={() => setHoveredSection('Projects')}
+            onMouseLeave={() => setHoveredSection(null)}
+          />
+        </Link>
       </div>
 
       <div className="relative flex flex-col items-center transform translate-y-12">
@@ -87,28 +90,30 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
         />
 
         {/* Phone changes on hover and glows on button press */}
-        <img
-          src={hoveredSection === 'Contact' ? `${process.env.PUBLIC_URL}/images/phone2.png` : `${process.env.PUBLIC_URL}/images/phone.png`}
-          alt="Phone"
-          className={`absolute top-[49%] left-[58.5%] hover:cursor-pointer w-[6vw] ${
-            isGlowing ? 'hover-glow-image' : ''
-          }`}
-          onMouseEnter={() => setHoveredSection('Contact')}
-          onMouseLeave={() => setHoveredSection(null)}
-          onClick={() => window.location.href = '/contact'}
-        />
+        <Link to="/contact">
+          <img
+            src={hoveredSection === 'Contact' ? `${process.env.PUBLIC_URL}/images/phone2.png` : `${process.env.PUBLIC_URL}/images/phone.png`}
+            alt="Phone"
+            className={`absolute top-[49%] left-[58.5%] hover:cursor-pointer w-[6vw] ${
+              isGlowing ? 'hover-glow-image' : ''
+            }`}
+            onMouseEnter={() => setHoveredSection('Contact')}
+            onMouseLeave={() => setHoveredSection(null)}
+          />
+        </Link>
 
         {/* Briefcase changes on hover and glows on button press */}
-        <img
-          src={hoveredSection === 'Experiences' ? `${process.env.PUBLIC_URL}/images/briefcase2.png` : `${process.env.PUBLIC_URL}/images/briefcase.png`}
-          alt="Briefcase"
-          className={`absolute bottom-[-5%] left-[-5%] hover:cursor-pointer w-[8vw] ${
-            isGlowing ? 'hover-glow-image' : ''
-          }`}
-          onMouseEnter={() => setHoveredSection('Experiences')}
-          onMouseLeave={() => setHoveredSection(null)}
-          onClick={() => window.location.href = '/experiences'}
-        />
+        <Link to="/experiences">
+          <img
+            src={hoveredSection === 'Experiences' ? `${process.env.PUBLIC_URL}/images/briefcase2.png` : `${process.env.PUBLIC_URL}/images/briefcase.png`}
+            alt="Briefcase"
+            className={`absolute bottom-[-5%] left-[-5%] hover:cursor-pointer w-[8vw] ${
+              isGlowing ? 'hover-glow-image' : ''
+            }`}
+            onMouseEnter={() => setHoveredSection('Experiences')}
+            onMouseLeave={() => setHoveredSection(null)}
+          />
+        </Link>
       </div>
     </section>
   );
