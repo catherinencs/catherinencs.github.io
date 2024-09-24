@@ -173,7 +173,7 @@ const Experience = () => {
       <NavigationBar hoveredSection={hoveredSection} setHoveredSection={setHoveredSection} />
       <div className="container mx-auto px-6 lg:px-20 pt-24 lg:pt-28 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
         <div className="w-full lg:w-1/3 flex justify-center">
-          <img src="/images/briefcase2.png" alt="Briefcase" className="w-full max-w-[250px] lg:max-w-none" />
+        <img src={`${process.env.PUBLIC_URL}/images/briefcase2.png`} alt="Briefcase" className="w-full max-w-[250px] lg:max-w-none" />
         </div>
 
         <div className="w-full lg:w-2/3">

@@ -36,10 +36,10 @@ const Projects = () => {
       ],
       visitLink: 'https://catherinencs.github.io/catherdines',
       images: [
-        '/images/projects/catherdines-1.png',
-        '/images/projects/catherdines-2.png',
-        '/images/projects/catherdines-3.png',
-        '/images/projects/catherdines-4.png'
+        `${process.env.PUBLIC_URL}/images/projects/catherdines-1.png`,
+        `${process.env.PUBLIC_URL}/images/projects/catherdines-2.png`,
+        `${process.env.PUBLIC_URL}/images/projects/catherdines-3.png`,
+        `${process.env.PUBLIC_URL}/images/projects/catherdines-4.png`
       ],
     },
     {
@@ -55,17 +55,17 @@ const Projects = () => {
       ],
       visitLink: 'https://github.com/catherinencs/yumyard',
       images: [
-        '/images/projects/yumyard-1.png',
-        '/images/projects/yumyard-2.png',
-        '/images/projects/yumyard-3.png',
-        '/images/projects/yumyard-4.png',
-        '/images/projects/yumyard-5.png',
-        '/images/projects/yumyard-6.png',
-        '/images/projects/yumyard-7.png',
-        '/images/projects/yumyard-8.png',
-        '/images/projects/yumyard-9.png',
-        '/images/projects/yumyard-10.png',
-        '/images/projects/yumyard-11.png',
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-1.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-2.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-3.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-4.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-5.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-6.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-7.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-8.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-9.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-10.png`,
+        `${process.env.PUBLIC_URL}/images/projects/yumyard-11.png`,
       ],
     },
     {
@@ -79,9 +79,9 @@ const Projects = () => {
       ],
       visitLink: 'https://github.com/catherinencs/pinmyplace',
       images: [
-        '/images/projects/pinmyplace-1.png',
-        '/images/projects/pinmyplace-2.png',
-        '/images/projects/pinmyplace-3.png',
+        `${process.env.PUBLIC_URL}/images/projects/pinmyplace-1.png`,
+        `${process.env.PUBLIC_URL}/images/projects/pinmyplace-2.png`,
+        `${process.env.PUBLIC_URL}/images/projects/pinmyplace-3.png`,
       ],
     },
     {
@@ -95,9 +95,9 @@ const Projects = () => {
       ],
       visitLink: 'https://github.com/catherinencs/artifind',
       images: [
-        '/images/projects/artifind-1.png',
-        '/images/projects/artifind-2.png',
-        '/images/projects/artifind-3.png',
+        `${process.env.PUBLIC_URL}/images/projects/artifind-1.png`,
+        `${process.env.PUBLIC_URL}/images/projects/artifind-2.png`,
+        `${process.env.PUBLIC_URL}/images/projects/artifind-3.png`,
       ],
     },
   ];
@@ -107,7 +107,7 @@ const Projects = () => {
       <NavigationBar hoveredSection={hoveredSection} setHoveredSection={setHoveredSection} />
       <div className="container mx-auto px-6 lg:px-20 pt-24 lg:pt-28 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
         <div className="w-full lg:w-1/3 flex justify-center">
-          <img src="/images/laptop2.png" alt="Projects" className="w-full max-w-[250px] lg:max-w-none" />
+          <img src={`${process.env.PUBLIC_URL}/images/laptop2.png`} alt="Projects" className="w-full max-w-[250px] lg:max-w-none" />
         </div>
 
         <div className="w-full lg:w-2/3">

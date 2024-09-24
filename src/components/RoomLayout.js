@@ -19,11 +19,11 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
     <section className="flex justify-center items-end gap-x-0 w-full max-w-[90vw] mx-auto mb-0">
       {/* Desk and Portrait Container */}
       <div className="relative flex flex-col items-center">
-        <img src="/images/desk.png" alt="Desk" className="w-[50vw]" />
+        <img src={`${process.env.PUBLIC_URL}/images/desk.png`} alt="Desk" className="w-[50vw]" />
 
         {/* Portrait changes on hover */}
         <img
-          src={hoveredSection === 'About' ? '/images/portrait2.png' : '/images/portrait.png'}
+          src={hoveredSection === 'About' ? `${process.env.PUBLIC_URL}/images/portrait2.png` : `${process.env.PUBLIC_URL}/images/portrait.png`}
           alt="Portrait"
           className={`absolute top-[-60%] left-[13%] hover:cursor-pointer w-[11vw] ${
             isGlowing ? 'hover-glow-image' : ''
@@ -35,7 +35,7 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
 
         {/* Laptop changes on hover */}
         <img
-          src={hoveredSection === 'Projects' ? '/images/laptop2.png' : '/images/laptop.png'}
+          src={hoveredSection === 'Projects' ? `${process.env.PUBLIC_URL}/images/laptop2.png` : `${process.env.PUBLIC_URL}/images/laptop.png`}
           alt="Laptop"
           className={`absolute top-[-7.1%] left-[48%] hover:cursor-pointer w-[15vw] z-100 ${
             isGlowing ? 'hover-glow-image' : ''
@@ -67,16 +67,16 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
           </svg>
         </div>
 
-        <img src="/images/human.png" alt="Human" className="w-[15.5vw]" />
+        <img src={`${process.env.PUBLIC_URL}/images/human.png`} alt="Human" className="w-[15.5vw]" />
       </div>
 
       {/* Cabinet with Trophy, Phone, and Briefcase */}
       <div className="relative">
-        <img src="/images/cabinet.png" alt="Cabinet" className="w-[40vw]" />
+        <img src={`${process.env.PUBLIC_URL}/images/cabinet.png`} alt="Cabinet" className="w-[40vw]" />
 
         {/* Trophy changes on hover and glows on button press */}
         <img
-          src={hoveredSection === 'Resume' ? '/images/trophy2.png' : '/images/trophy.png'}
+          src={hoveredSection === 'Resume' ? `${process.env.PUBLIC_URL}/images/trophy2.png` : `${process.env.PUBLIC_URL}/images/trophy.png`}
           alt="Trophy"
           className={`absolute top-[13%] left-[37%] hover:cursor-pointer w-[7vw] ${
             isGlowing ? 'hover-glow-image' : ''
@@ -88,7 +88,7 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
 
         {/* Phone changes on hover and glows on button press */}
         <img
-          src={hoveredSection === 'Contact' ? '/images/phone2.png' : '/images/phone.png'}
+          src={hoveredSection === 'Contact' ? `${process.env.PUBLIC_URL}/images/phone2.png` : `${process.env.PUBLIC_URL}/images/phone.png`}
           alt="Phone"
           className={`absolute top-[49%] left-[58.5%] hover:cursor-pointer w-[6vw] ${
             isGlowing ? 'hover-glow-image' : ''
@@ -100,7 +100,7 @@ const RoomLayout = ({ hoveredSection, setHoveredSection }) => {
 
         {/* Briefcase changes on hover and glows on button press */}
         <img
-          src={hoveredSection === 'Experiences' ? '/images/briefcase2.png' : '/images/briefcase.png'}
+          src={hoveredSection === 'Experiences' ? `${process.env.PUBLIC_URL}/images/briefcase2.png` : `${process.env.PUBLIC_URL}/images/briefcase.png`}
           alt="Briefcase"
           className={`absolute bottom-[-5%] left-[-5%] hover:cursor-pointer w-[8vw] ${
             isGlowing ? 'hover-glow-image' : ''

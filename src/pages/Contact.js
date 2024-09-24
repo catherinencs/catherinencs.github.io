@@ -16,7 +16,7 @@ const Contacts = () => {
         {/* Phone Image Section */}
         <div className="w-full lg:w-1/3 flex justify-center">
           <img
-            src="/images/phone2.png"
+            src={`${process.env.PUBLIC_URL}/images/phone2.png`}
             alt="Phone Icon"
             className="w-full max-w-[250px] lg:max-w-none"
           />

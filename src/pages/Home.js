@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-no-repeat bg-cover bg-center"
-         style={{ backgroundImage: "url('/images/background.png')" }}>
+         style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/background.png)` }}>
       <NavigationBar hoveredSection={hoveredSection} setHoveredSection={setHoveredSection} />
       <div className="flex-grow pt-20">
         <RoomLayout hoveredSection={hoveredSection} setHoveredSection={setHoveredSection} />

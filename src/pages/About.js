@@ -108,7 +108,7 @@ const About = () => {
         {/* Portrait Section */}
         <div className="w-full lg:w-1/3 flex justify-center">
           <img
-            src="/images/portrait2.png"
+            src={`${process.env.PUBLIC_URL}/images/portrait2.png`}
             alt="Catherine's Portrait"
             className="w-full max-w-[250px] lg:max-w-none"
           />
